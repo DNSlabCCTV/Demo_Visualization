@@ -1,0 +1,231 @@
+*:focus {
+    outline: none;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-auto-rows: 5%;
+}
+
+.img_grid {
+    grid-row-start: 1;
+    grid-row-end: 9;
+}
+
+.top_grid{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+.network_grid {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 10;
+    grid-row-end: 19;
+}
+
+.button_grid{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 19;
+    grid-row-end: 21;
+}
+
+.vid_view {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#video_div {
+    display: grid;
+    height: 100%;
+}
+
+
+.vid_wrapper {
+    display: grid;
+    grid-auto-rows: 10%;
+}
+
+.video_grid {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.db_grid {
+    grid-row-start: 5;
+    grid-row-end:11;
+}
+
+#network_div {
+    display: grid;
+    height: 100%;
+}
+
+iframe {
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+div {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#seperat_img{
+    border:1px solid black;
+}
+
+#network {
+    display: grid;
+    height: 100%;
+}
+
+div.popupMenu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 90px;
+}
+
+.modal {
+
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto; /* 15% from the top and centered */
+padding: 20px;
+border: 1px solid #888;
+width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.progress{
+  border-radius: 20px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 45%;
+  bottom: 0;
+}
+
+.backLayer{
+  position: absolute;
+  display: none;
+  top:0px;
+  left:0px;
+  background-color:black;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: silver;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+div#store_vid {
+        background-color: whiteSmoke;
+}
+
+div#store_vid li{
+        background-color: whiteSmoke;
+        padding: 5px;
+        cursor : pointer;
+        animation: fadeEffect 1s;
+        color: black;
+}
+
+div#store_vid li:hover{
+    background-color: silver;
+}
+
+div#ai_vid li{
+     background-color: whiteSmoke;
+      padding: 5px;
+      cursor:pointer;
+      animation:fadeEffect ls;
+      color:black; 
+}
+div#ai_vid li:hover{
+    background-color: silver;
+}
+
+div#store_vid button {
+  border-radius: 8px;
+  background-color: lightslategray;
+  color:  white;
+  border: 1px solid lightslategray;
+}
+
+div#store_vid button:hover {
+  background-color: slategray;
+  color:  white;
+}

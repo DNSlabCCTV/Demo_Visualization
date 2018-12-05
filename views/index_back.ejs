@@ -1,0 +1,101 @@
+<html>
+<title>Demo Visualization</title>
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <script language="javascript" src="https://momentjs.com/downloads/moment.js"></script>
+    <script type="text/javascript" src="demo_visualization/public/vis/dist/vis.js"></script>
+    <script type="text/javascript" src="demo_visualization/public/script/visualization.js"></script>
+    <script type="text/javascript" src="demo_visualization/public/vis/dist/vis.animateTraffic.js"></script>
+    <link href="demo_visualization/public/vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+    <link href="demo_visualization/public/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="demo_visualization/public/css/style.css">
+</head>
+<!--
+<div class="backLayer"></div>
+-->
+<body style="padding:0 0 0 0; margin: 0 0 0 0" onload="drawTopology()">
+<div id="video_div" class="col-sm-9" style="padding:0; margin:0">
+    <div class="wrapper" display="inline">
+        <div class="img_grid vid_view" id="img_box">
+
+        </div>
+        <div class="img_grid" style="border:1px solid black">
+            <img id="big_vid" height="100%" width="100%" src="">
+        </div>
+
+        <div style="height:100%; width:100%; text-align: center;" class="top_grid">
+            <h2><b>KOREN SDI Platform Smart Campus Safety Service</b></h2>
+        </div>
+
+        <div style="height:100%; width:100%" class="network_grid">
+            <div id="network">
+
+            </div>
+        </div>
+        <div style="height:100%; width:100%" class="button_grid">
+            <img src="../img/mark.png" style="margin-left:15%" height="100%">
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="myModal" role="dialog" display="none">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">카메라 추가하기</h4><br>
+                        <p id="selected-node-id"></p>
+                    </div>
+
+                <div class="modal-body">
+                    <input type="hidden" id="obox" value="">
+                    <input type="radio" name="image" value="kerberos"> Kerberos<br>
+                    <input type="radio" name="image" value="zoneminder"> Zoneminder<br>
+                    카메라 이름: <input type="text" id="cam_name">
+                    <br> RTSP URL: <input type="text" id="cam_rtsp">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onClick='saveChange()'>Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close_modal_btn" onclick="close_modal()">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="vid_wrapper" id="video_div" class="col-sm-3" style="padding:0">
+
+  <div class="video_grid" style="height:100%; width:100%;">
+    <video id="a_vid" controls="controls" height="100%" width="100%">
+      <source id="db_vid" src="/JNU/vid1/2018-11-23/10-10.mp4" type="video/mp4">
+    </video>
+  </div>
+<!--
+  <form class="db_form" action='/' method='post' style="margin:0 0 0 0; height:100%; width:100%">
+-->
+  <div class="db_grid" id="db_list" style="height:100%; width:100%; background-color:gray; border:1px solid black">
+      <div id="cameraview">
+        <input type="text" id="obox_name" name="obox" style="display:none;"/>
+        <input type="text" id="camera_num" name="cctv" style="display:none;"/>
+        <input type="date" id="camera_date" name='date' min="2018-11-19" max="2018-12-31"/>
+        <button id="camera-btn" onclick="select_date(this)" type='submit'>조회</button>
+      </div>
+      <div id="vid_list" style="width:100%"></div>
+  </div>
+<!--
+</form>
+-->
+</div>
+
+<div class="progress" style="width: 50%; height:7%; display:none;">
+  <div id="probar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%; height:100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <h3>Loading...</h3>
+  </div>
+</div>
+</body>
+</html>
