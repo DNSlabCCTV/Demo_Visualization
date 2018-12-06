@@ -475,7 +475,6 @@
               popupButton1.setAttribute('type', 'submit');
               popupButton1.setAttribute('value', '카메라추가');
               popupButton1.setAttribute('class', 'btn btn-info btn-lg');
-              //                  popupButton1.setAttribute('data-toggle', 'modal');
               popupButton1.setAttribute('data-target', '#myModal');
               popupButton1.setAttribute('onclick', 'sendID()');
               popupButton1.setAttribute('style', 'text-align:center');
@@ -517,7 +516,6 @@
               else{
                 popupMenu.appendChild(popupButton2);
                 popupMenu.appendChild(popupButton3);
- //               popupMenu.appendChild(popupButton4);
                 popupMenu.appendChild(popupButton5);
                 popupMenu.setAttribute('style','opacity:1')
                 popupMenu.style.left = e.pageX;
