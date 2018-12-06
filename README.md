@@ -1,5 +1,5 @@
 # Demo_Visualization
-![noname01](./public/img/noname01.png)
+![noname03](./public/img/noname03.png)
 
  Smart Campus Safety CCTV 서비스의 Control Room에서는 분산된 CCTV의 통합 관제를 위한 시각화 및 각 CCTV의 구체적 정보 확인을 위한 시각화가 필요하다. 또한, 간단한 영상 데이터 분석 결과를 확인하기 위한 시각화를 제공할 수도 있다.
  
