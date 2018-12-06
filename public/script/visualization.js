@@ -429,8 +429,6 @@
                 {edge:edges_id[11], trafficSize:10},
                 {edge:edges_id[12], trafficSize:10},
                 {edge:edges_id[13], trafficSize:10},
-//                {edge:edges_id[14], trafficSize:10},
-//                {edge:edges_id[15], trafficSize:10},
               ])
               setInterval(function(){network.animateTraffic([
                 {edge:edges_id[0], trafficSize:10},
@@ -447,8 +445,6 @@
                 {edge:edges_id[11], trafficSize:10},
                 {edge:edges_id[12], trafficSize:10},
                 {edge:edges_id[13], trafficSize:10},
-//                {edge:edges_id[14], trafficSize:10},
-//                {edge:edges_id[15], trafficSize:10},
               ])},4000)
 
               network.on('click', function(properties) { //properties는 Object.
@@ -498,14 +494,7 @@
               popupButton3.setAttribute('onclick', 'saved_video()');
               popupButton3.setAttribute('style', 'width:150px; text-align:center');
 
-/*
-              popupButton4 = document.createElement('input');
-              popupButton4.setAttribute('type', 'submit');
-              popupButton4.setAttribute('value', 'AI분석 영상');
-              popupButton4.setAttribute('class', 'btn btn-info btn-lg');
-              popupButton4.setAttribute('onclick', 'analysis_video()');
-              popupButton4.setAttribute('style', 'width:150px; text-align:center');
-*/
+
               popupButton5 = document.createElement('input');
               popupButton5.setAttribute('type', 'submit');
               popupButton5.setAttribute('value', 'DashBoard');
@@ -573,18 +562,7 @@
       popupmenu.style.display ="none";
       window.open(url);
     }
-/*
-    function analysis_video(){
-      var child = document.getElementById('db_list').children;
-      for(var i = 0; i < child.length; i++){
-        child[i].style.display = "none";
-      }
-      var name = '#'+network.getSelection().nodes[0];
-      $(name).css("display","");
-      var popupmenu = document.getElementById("popup")
-      popupmenu.style.display ="none";
-    }
-*/
+
     function removeNode() { //카메라 제거 버튼을 누르면 노드 삭제되게끔, 프로토타입으로 제작함.
       var cameraName = network.getSelection().nodes[0];
       var popupmenu = document.getElementById("popup")
@@ -737,20 +715,6 @@
     }
 
     function loadingwindow(){
-/*
-      var width = $(window).width();
-      var height = $(window).height();
-
-      $(".backLayer").width(width);
-      $(".backLayer").height(height);
-
-      $(".backLayer").fadeTo(15000, 0.3);
-*/
-//      var progbar = $(".progress");
-//      progbar.css("display","");
-
-//      var bar = document.getElementsByClassName("progress-bar");
-//      bar.className += " progress-bar-animated";
 
       var progbar = $(".progress");
       progbar.css("display","");
@@ -772,7 +736,7 @@
       $('#JNU').empty();
       $('#CHULA').empty();
       $('#UCI').empty();
-//      $(divname).empty();
+
       var $ul = $('<ul id="'+data[0].OBOX+"_"+data[0].CCTV+'"style="wdith:100%; height:100%; list-style:none; margin-top:8px; padding-left:0px; overflow:auto;"></ul>')
       $(divname).append($ul);
       for(var i=0 ; i< data.length ; i++){  
@@ -812,7 +776,6 @@
    socket_local.on("check",function(data){
 
      var name = data[0].CCTV;
-//     alert(name+" 에서 이상현상 감지!!");
      swal(name+" 에서 이상현상 감지!!");
    })
 
@@ -846,7 +809,7 @@
 
         // Show the current tab, and add an "active" class to the button that opened the tab
         document.getElementById(tabName).style.display = "block";
-//        document.getElementById('camera_date').valueAsDate = new Date();
+
         evt.currentTarget.className += " active";
 
     }
