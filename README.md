@@ -16,4 +16,4 @@ Cbox 속의 CCTV 관리 프로그램인 Kerberos.io, Zonminder를 통해 각 CCT
  
  ## 1. 기능
  ### 1.1. CCTV Visualization
-  CCTV 영상을 받아와 
+ UI에서 CCTV 영상을 한 눈에 볼 수 있다. 영상이나 Network Topology 속 CCTV 이미지 클릭을 통해 더 영상을 크게 확대하여 볼 수 있다.
