@@ -17,3 +17,11 @@ Cbox 속의 CCTV 관리 프로그램인 Kerberos.io, Zonminder를 통해 각 CCT
  ## 1. 기능
  ### 1.1. CCTV Visualization
  UI에서 CCTV 영상을 한 눈에 볼 수 있다. 영상이나 Network Topology 속 CCTV 이미지 클릭을 통해 더 영상을 크게 확대하여 볼 수 있다.
+ 
+ ### 1.2. Network Topology
+ 현재 등록된 기관 및 CCTV를 한 눈에 볼 수 있는 망형 구조의 트리이다. 각 기관에서 카메라 추가/제거 기능 및 각 카메라에서 카메라 제거, 저장된 영상 그리고 CCTV 영상에 따른 Dashboard를 볼 수 있는 기능을 구현했다.
+
+ ### 1.3. 저장 영상 및 AI분석 영상 출력
+ 건국대 측에서 각 CCTV의 영상을 10분 단위로 나누어 Datalake에 저장한다. 성균관대 측에서는 10분 단위로 나누어진 영상에 이상현상이 일어나는지 분석하고, 이상현상이 감지되는 영상에 한하여 Datalake에 추가로 저장한다.
+ 
+  Control Room의 UI에서는 이 영상들을 각 기관의 카메라마다 분류하여 확인할 수 있다.
