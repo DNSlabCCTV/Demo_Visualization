@@ -27,4 +27,5 @@ Cbox 속의 CCTV 관리 프로그램인 Kerberos.io, Zonminder를 통해 각 CCT
  건국대 측에서 각 CCTV의 영상을 10분 단위로 나누어 Datalake 및 영상정보DB에 저장한다. 성균관대 측에서는 10분 단위로 나누어진 영상에 이상현상이 일어나는지 분석하고, 이상현상이 감지되는 영상에 한하여 Datalake에 추가로 저장한다. 이 때, 이상현상 감지된 카메라에 한하여 메세지 창을 띄운다.
  
   Control Room의 Web Server에서는 기관명, 카메라 이름, 날짜, 저장결로가 기록된 DB에 접근하여 영상들을 볼 수가 있다.
+  
   ![jnu_db](./public/img/jnu_db.png) ![skku_db](./public/img/skku_db.png)
