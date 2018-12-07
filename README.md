@@ -1,4 +1,4 @@
-# Smart Campus Safety Service
+# Smart Campus Safety Service Visualization
 
 ## 1. 전체 구상
 ![momm3](./public/img/momm3.png)
